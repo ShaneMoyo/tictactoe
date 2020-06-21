@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import TicTacToe from './TicTacToe'; 
+import GetGists from './GetGists'; 
+
 import { 
   BrowserRouter as Router,
   Link, 
@@ -10,7 +12,7 @@ import {
 import './App.css';
 
 function App() {
-  
+ 
   return (
     <div className="App">
       <Router>
@@ -18,7 +20,7 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/gists">Gists</Link>
               </li>
               <li>
                 <Link to="/tictactoe">Tic Tac Toe</Link>
@@ -30,9 +32,13 @@ function App() {
           </nav>
         </div>
         <Switch>
-          <Route path="/tictactoe" component={TicTacToe} /> 
+          <Route path="/tictactoe" component={TicTacToe} />
+          <Route path="/gists" component={GetGists}/>
+          <Route path="/">
+            <h1>HOME</h1>
+          </Route>
+          
         </Switch>
-        
       </Router>
     </div>
   );
