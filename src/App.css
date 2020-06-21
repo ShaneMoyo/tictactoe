@@ -1,3 +1,8 @@
+.body {
+  margin: 0;
+  padding: 0;
+ }
+
 .board { 
   width: 31rem; 
   height: 31rem; 
@@ -11,4 +16,8 @@
   width: 10rem; 
   height: 10rem; 
   border: 1px solid black; 
+}
+
+.square:hover { 
+  background: lightblue;
 }
